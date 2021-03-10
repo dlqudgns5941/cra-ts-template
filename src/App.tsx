@@ -14,7 +14,7 @@ const Container = styled.div`
 const App = () => {
   return (
     <Container>
-      <Header />
+      <Header name={'bhlee'} age={30} />
       <BrowserRouter>
         <Switch>
           <Route path="/home" component={HomePage} />
