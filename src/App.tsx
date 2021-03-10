@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
-function App() {
+import Header from '@components/Header';
+import HomePage from '@pages/HomePage';
+import AccountPage from '@pages/AccountPage';
+import styled from 'styled-components';
+
+// ToDo props.theme.dark or props.theme.light 에 따라 다르게 동작.
+const Container = styled.div`
+  background-color: blue;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/home" component={HomePage} />
+          <Route path="/account" component={AccountPage} />
+          {/* Not Found */}
+          <Route component={() => <Redirect to="/home" />} />
+        </Switch>
+      </BrowserRouter>
+    </Container>
   );
-}
+};
 
 export default App;
