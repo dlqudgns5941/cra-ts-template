@@ -27,4 +27,7 @@
 - [ ]  unit test setting
 - [ ]  svg 파일 처리
 - [ ]  애니메이션..
-- [ ]  등등
+- [ ] package.json (devDep..., dep 정리 및 사용하지 않는 모듈 삭제)
+- [ ] 성능 최적화
+- [ ] CSS 방법론
+- [ ] ...
