@@ -22,6 +22,11 @@
     - [x]  simple storybook snapshot 테스트 작성
     - [ ]  복합 컴포넌트 storybook 컴포넌트 작성
     - [ ]  페이지 컴포넌트 storybook 컴포넌트 작성(상태 연결되어 있는거
+- [x] 서버 데이터 구조 설계
+- [x] redux, redux-toolkit 설정
+- [x] 스토어 설계
+- [ ] redux-saga 설정
+
 - [ ]  code-spliting (react-loadable)
 - [ ]  cypress
 - [ ]  unit test setting
