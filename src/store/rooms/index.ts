@@ -17,9 +17,9 @@ const rooms = createSlice({
   name: 'rooms',
   initialState,
   reducers: {
-    // setAuthMode(state, action: PayloadAction<'signup' | 'login'>) {
-    //   state.authMode = action.payload;
-    // },
+    createRoom(state, action: PayloadAction<'test'>) {
+      // state.authMode = action.payload;
+    },
   },
 });
 
