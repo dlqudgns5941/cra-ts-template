@@ -12,9 +12,9 @@ ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={customTheme}>
       <GlobalStyle />
-      <Provider store={store}>
-        <App />
-      </Provider>
+      {/* <Provider store={store}> */}
+      <App />
+      {/* </Provider> */}
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root'),
