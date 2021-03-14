@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { getRoomsInfo } from '@data/index';
 
 type Room = {
   id: string;
@@ -11,7 +12,7 @@ type Room = {
 
 type RoomsState = Array<Room>;
 
-const initialState: RoomsState = [];
+const initialState: RoomsState = getRoomsInfo();
 
 const rooms = createSlice({
   name: 'rooms',

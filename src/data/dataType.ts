@@ -27,7 +27,7 @@ export type GetRoomChatInfo = (
   lastUpdatedAt: number;
 };
 
-export type GetRoomInfos = () => Array<{
+export type GetRoomsInfo = () => Array<{
   id: string;
   avatarUrl: string;
   displayName: string;

@@ -1,7 +1,7 @@
 import {
   Chat,
   GetRoomById,
-  GetRoomInfos,
+  GetRoomsInfo,
   Room,
   UploadImage,
   WriteMessage,
@@ -14,7 +14,7 @@ import {
   makeMessageChat,
 } from './utils';
 
-export const getRoomInfos: GetRoomInfos = () =>
+export const getRoomsInfo: GetRoomsInfo = () =>
   data.rooms
     .map(({ id, avatarUrl, displayName, chats }) => ({
       id,
