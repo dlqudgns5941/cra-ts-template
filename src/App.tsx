@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
-import Header from '@components/Header';
 import HomePage from '@pages/HomePage';
 import AccountPage from '@pages/AccountPage';
 import ListPage from '@pages/ListPage';
@@ -13,7 +12,6 @@ const Container = styled.div``;
 const App = () => {
   return (
     <Container>
-      <Header name={'bhlee'} age={30} />
       <BrowserRouter>
         <Switch>
           <Route path="/home" component={HomePage} />
