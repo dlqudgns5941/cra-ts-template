@@ -44,5 +44,4 @@ export const uploadImage: UploadImage = ({ roomId, imageUrl }) => {
   room.chats.push(chat);
 };
 
-// imageList
-// read...
+export const getPhotos: Array<string> = data.photos;

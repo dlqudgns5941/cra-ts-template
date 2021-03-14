@@ -17,6 +17,7 @@ export interface Room {
 
 export interface Data {
   rooms: Array<Room>;
+  photos: Array<string>;
 }
 
 export type GetRoomChatInfo = (
