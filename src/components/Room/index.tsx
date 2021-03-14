@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import translateTimestamp from '@utils/translateTimestamp';
-import sampleImg from './sample.png';
 
 const StyledWrapper = styled.div<{ unreadCount: number }>`
   background-color: #fff;
@@ -108,9 +107,7 @@ const Room: React.FC<RoomProps> = ({
   return (
     <Link style={{ textDecoration: 'none' }} to={`/room/${id}`}>
       <StyledWrapper unreadCount={unreadCount}>
-        {/*<img src={avatarUrl} alt={displayName} />*/}
         <img src={avatarUrl} alt={displayName} />
-        {/* <img src={avatarUrl}/> */}
         <div className="main">
           <div className="user">{displayName}</div>
           <div className="message">{displayedMessage}</div>

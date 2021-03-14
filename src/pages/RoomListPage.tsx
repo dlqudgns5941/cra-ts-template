@@ -21,7 +21,7 @@ const Container = styled.div`
   }
 `;
 
-const ListPage = () => {
+const RoomListPage = () => {
   // const dispatch = useDispatch();
 
   const roomList = useSelector((state) => state.rooms);
@@ -49,4 +49,4 @@ const ListPage = () => {
   );
 };
 
-export default ListPage;
+export default RoomListPage;
