@@ -1,19 +1,19 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 type CommonState = {
-  validateMode: boolean;
+  currentTheme: 'light' | 'dark';
 };
 
 const initialState: CommonState = {
-  validateMode: false,
+  currentTheme: 'light',
 };
 
 const common = createSlice({
   name: 'common',
   initialState,
   reducers: {
-    setValidateMode(state, action: PayloadAction<boolean>) {
-      state.validateMode = action.payload;
+    setCurrentTheme(state, action: PayloadAction<'light' | 'dark'>) {
+      state.currentTheme = action.payload;
     },
   },
 });
