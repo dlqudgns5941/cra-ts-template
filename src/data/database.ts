@@ -1,7 +1,7 @@
 import { Data } from './dataType';
 
-const profileImageRoot = './assets/images/profile';
-const photoImageRoot = './assets/images/photo';
+const profileImageRoot = './images/profile';
+const photoImageRoot = './images/photo';
 
 const data: Data = {
   photos: [

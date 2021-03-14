@@ -83,7 +83,7 @@ export interface RoomProps {
 
 const Room: React.FC<RoomProps> = ({
   id,
-  // avatarUrl,
+  avatarUrl,
   displayName,
   lastChatMessage,
   lastUpdatedAt,
@@ -108,7 +108,8 @@ const Room: React.FC<RoomProps> = ({
   return (
     <Link style={{ textDecoration: 'none' }} to={`/room/${id}`}>
       <StyledWrapper unreadCount={unreadCount}>
-        <img src={sampleImg} alt="sample" />
+        {/*<img src={avatarUrl} alt={displayName} />*/}
+        <img src={avatarUrl} alt={displayName} />
         {/* <img src={avatarUrl}/> */}
         <div className="main">
           <div className="user">{displayName}</div>
