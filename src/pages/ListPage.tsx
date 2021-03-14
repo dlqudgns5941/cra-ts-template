@@ -5,8 +5,8 @@ import Room from '@components/Room';
 import { useDispatch } from 'react-redux';
 import { useSelector } from '@store/index';
 import { commonActions } from '@store/common';
-import { ReactComponent as Hamburger } from '@assets/images2/hamburger.svg';
-import { ReactComponent as User } from '@assets/images2/user.svg';
+import { ReactComponent as Hamburger } from '@assets/icons/hamburger.svg';
+import { ReactComponent as User } from '@assets/icons/user.svg';
 
 const Container = styled.div`
   ${Header} {
