@@ -5,13 +5,13 @@ import Room from '@components/Room';
 import { useDispatch } from 'react-redux';
 import { useSelector } from '@store/index';
 import { commonActions } from '@store/common';
-import { ReactComponent as Hamburger } from '@assets/icons/hamburger.svg';
+import { ReactComponent as Menu } from '@assets/icons/menu.svg';
 import { ReactComponent as User } from '@assets/icons/user.svg';
 
 const Container = styled.div`
   ${Header} {
     justify-content: space-between;
-
+    margin-bottom: 0.625rem;
     .page-title {
       color: #fff;
       font-size: 1.063rem;
@@ -38,9 +38,9 @@ const ListPage = () => {
   return (
     <Container>
       <Header>
-        <User />
+        <Menu />
         <div className="page-title">채팅</div>
-        <Hamburger />
+        <User />
       </Header>
       {roomList.map((room) => (
         <Room key={room.id} {...room} />
