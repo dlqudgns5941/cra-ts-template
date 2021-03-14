@@ -5,19 +5,12 @@ import Room from '@components/Room';
 import { useDispatch } from 'react-redux';
 import { useSelector } from '@store/index';
 import { commonActions } from '@store/common';
-import { ReactComponent as Menu } from '@assets/icons/menu.svg';
-import { ReactComponent as User } from '@assets/icons/user.svg';
+import { ReactComponent as MenuIcon } from '@assets/icons/menu.svg';
+import { ReactComponent as UserIcon } from '@assets/icons/user.svg';
 
 const Container = styled.div`
   ${Header} {
-    justify-content: space-between;
     margin-bottom: 0.625rem;
-    .page-title {
-      color: #fff;
-      font-size: 1.063rem;
-      font-weight: bold;
-      letter-spacing: -0.12px;
-    }
   }
 `;
 
@@ -38,9 +31,9 @@ const RoomListPage = () => {
   return (
     <Container>
       <Header>
-        <Menu />
+        <MenuIcon />
         <div className="page-title">채팅</div>
-        <User />
+        <UserIcon />
       </Header>
       {roomList.map((room) => (
         <Room key={room.id} {...room} />

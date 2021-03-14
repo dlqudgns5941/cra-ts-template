@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import translateTimestamp from '@utils/translateTimestamp';
+import translateTimestamp from '../../utils/translateTimestamp';
 
-const StyledWrapper = styled.div<{ unreadCount: number }>`
+const StyledWrapper = styled.div<{ unReadCount: number }>`
   background-color: #fff;
   display: flex;
   justify-content: space-between;
@@ -64,7 +64,7 @@ const StyledWrapper = styled.div<{ unreadCount: number }>`
       font-size: 0.625rem;
       font-weight: bold;
       letter-spacing: -0.08px;
-      opacity: ${({ unreadCount }) => (unreadCount === 0 ? 0 : 1)};
+      opacity: ${({ unReadCount }) => (unReadCount === 0 ? 0 : 1)};
       height: 1.125rem;
       width: 1.125rem;
     }
@@ -77,7 +77,7 @@ export interface RoomProps {
   displayName: string;
   lastChatMessage: string;
   lastUpdatedAt: number;
-  unreadCount: number;
+  unReadCount: number;
 }
 
 const Room: React.FC<RoomProps> = ({
@@ -86,7 +86,7 @@ const Room: React.FC<RoomProps> = ({
   displayName,
   lastChatMessage,
   lastUpdatedAt,
-  unreadCount,
+  unReadCount,
 }) => {
   const displayedMessage =
     lastChatMessage.length > 24
@@ -106,7 +106,7 @@ const Room: React.FC<RoomProps> = ({
 
   return (
     <Link style={{ textDecoration: 'none' }} to={`/room/${id}`}>
-      <StyledWrapper unreadCount={unreadCount}>
+      <StyledWrapper unReadCount={unReadCount}>
         <img src={avatarUrl} alt={displayName} />
         <div className="main">
           <div className="user">{displayName}</div>
@@ -114,7 +114,7 @@ const Room: React.FC<RoomProps> = ({
         </div>
         <div className="right">
           <div className="timestamp">{displayedTimestamp}</div>
-          <div className="unread-count">{unreadCount}</div>
+          <div className="unread-count">{unReadCount}</div>
         </div>
       </StyledWrapper>
     </Link>

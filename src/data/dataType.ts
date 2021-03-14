@@ -23,7 +23,7 @@ export interface Data {
 export type GetRoomChatInfo = (
   chats: Array<Chat>,
 ) => {
-  unreadCount: number;
+  unReadCount: number;
   lastChatMessage: string;
   lastUpdatedAt: number;
 };
@@ -32,7 +32,7 @@ export type GetRoomsInfo = () => Array<{
   id: string;
   avatarUrl: string;
   displayName: string;
-  unreadCount: number;
+  unReadCount: number;
   lastChatMessage: string;
   lastUpdatedAt: number;
 }>;

@@ -11,12 +11,12 @@ export const makeId = () => Math.random().toString(36).substr(2, 11);
 export const getRoomChatInfo: GetRoomChatInfo = (chats) =>
   chats.reduce(
     (acc, chat) => {
-      let { unreadCount, lastChatMessage, lastUpdatedAt } = acc;
+      let { unReadCount, lastChatMessage, lastUpdatedAt } = acc;
       const { message, createdAt, isRead } = chat;
 
       // 읽지 않은 글 카운트
       if (!isRead) {
-        unreadCount = unreadCount + 1;
+        unReadCount = unReadCount + 1;
       }
 
       // 더 최신에 작성한 챗인 경우
@@ -26,13 +26,13 @@ export const getRoomChatInfo: GetRoomChatInfo = (chats) =>
       }
 
       return {
-        unreadCount,
+        unReadCount,
         lastChatMessage,
         lastUpdatedAt,
       };
     },
     {
-      unreadCount: 0,
+      unReadCount: 0,
       lastChatMessage: '',
       lastUpdatedAt: 0,
     },

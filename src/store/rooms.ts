@@ -5,7 +5,7 @@ type Room = {
   id: string;
   avatarUrl: string;
   displayName: string;
-  unreadCount: number;
+  unReadCount: number;
   lastChatMessage: string;
   lastUpdatedAt: number;
 };
