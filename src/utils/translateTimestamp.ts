@@ -11,7 +11,7 @@ type TranslateTimestamp = (
   translatedMinute: string;
 };
 
-type getIsToday = ({
+type IsToday = ({
   timeStamp,
   date,
 }: {
@@ -29,7 +29,7 @@ const dayList = [
   '토요일',
 ] as const;
 
-const getIsToday: getIsToday = ({ timeStamp, date }) => {
+const isToday: IsToday = ({ timeStamp, date }) => {
   const now = new Date();
   return (
     Math.abs(timeStamp - now.getTime()) < 1000 * 60 * 60 * 24 &&
@@ -50,7 +50,7 @@ const translateTimestamp: TranslateTimestamp = (timeStamp) => {
     year: `${year}`,
     month: `${month}`,
     date: `${date}`,
-    isToday: getIsToday({ timeStamp, date }),
+    isToday: isToday({ timeStamp, date }),
     translatedDate: `${year}년 ${month}월 ${date}일`,
     translatedDay: dayList[day],
     translatedHour: hour < 10 ? `0${hour}` : `${hour}`,

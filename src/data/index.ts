@@ -43,3 +43,6 @@ export const uploadImage: UploadImage = ({ roomId, imageUrl }) => {
   const chat = makeImageChat(imageUrl) as Chat;
   room.chats.push(chat);
 };
+
+// imageList
+// read...
